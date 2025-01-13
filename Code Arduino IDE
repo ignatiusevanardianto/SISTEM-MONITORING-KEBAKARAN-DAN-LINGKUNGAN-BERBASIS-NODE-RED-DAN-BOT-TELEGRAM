@@ -1,0 +1,97 @@
+#include <DHT.h>
+#include <WiFi.h>
+#include <ModbusIP_ESP8266.h>
+
+// DHT11 config
+#define DHTPIN 13
+#define DHTTYPE DHT11
+
+// Modbus data address
+#define SLAVE_ID 1
+#define IReg_temp_address 1
+#define IReg_hum_address 2
+#define IReg_fire_address 3
+#define IReg_gas_address 4
+
+// Sensor Fire config
+#define FIRE_SENSOR_PIN 14 // Digital pin for Fire Sensor
+
+// MQ-2 Gas Sensor config
+#define MQ2_SENSOR_PIN 35 // Digital pin for Gas Sensor
+
+// WiFi parameters
+const char* ssid = "wifi anda";
+const char* password = "password wifi anda";
+
+// Static IP parameters
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+IPAddress ip(192, 168, 1, 254);
+IPAddress gateway(192, 168, 1, 1);
+IPAddress netmask(255, 255, 255, 0);
+IPAddress dns(8, 8, 8, 8);
+
+ModbusIP modbus;
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+    Serial.begin(115200);
+    
+    // Initialize WiFi
+    WiFi.config(ip, gateway, netmask, dns);
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+
+    Serial.println("\nWiFi connected");
+    Serial.print("IP address: ");
+    Serial.println(WiFi.localIP());
+
+    // Initialize sensors
+    dht.begin();
+    pinMode(FIRE_SENSOR_PIN, INPUT);
+    pinMode(MQ2_SENSOR_PIN, INPUT);
+
+    // Initialize Modbus
+    modbus.server();
+    modbus.addIreg(IReg_temp_address);
+    modbus.addIreg(IReg_hum_address);
+    modbus.addIreg(IReg_fire_address);
+    modbus.addIreg(IReg_gas_address);
+}
+
+void loop() {
+    // Read sensor values
+    float temp = dht.readTemperature();
+    float hum = dht.readHumidity();
+    int fireStatus = digitalRead(FIRE_SENSOR_PIN); // Read digital flame sensor value
+    int gasStatus = digitalRead(MQ2_SENSOR_PIN); // Read digital MQ-2 sensor value
+
+    // Debugging output
+    Serial.print("Temp: ");
+    Serial.print(temp);
+    Serial.println(" C");
+
+    Serial.print("Hum: ");
+    Serial.print(hum);
+    Serial.println(" %");
+
+    Serial.print("Fire Detected: ");
+    Serial.println(fireStatus == HIGH ? "No" : "Yes"); // Assume LOW indicates fire
+
+    Serial.print("Gas Detected: ");
+    Serial.println(gasStatus == HIGH ? "No" : "Yes"); // Assume LOW indicates gas presence
+
+    Serial.println();
+
+    // Update Modbus registers
+    modbus.Ireg(IReg_temp_address, temp * 10); // Multiply by 10 to send as integer
+    modbus.Ireg(IReg_hum_address, hum * 10); // Multiply by 10 to send as integer
+    modbus.Ireg(IReg_fire_address, fireStatus);
+    modbus.Ireg(IReg_gas_address, gasStatus);
+
+    // Run Modbus task
+    modbus.task();
+    delay(500);
+}
