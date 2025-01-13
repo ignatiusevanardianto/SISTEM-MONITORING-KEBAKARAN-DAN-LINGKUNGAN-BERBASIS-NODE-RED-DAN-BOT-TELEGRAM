@@ -1,34 +1,613 @@
 [
     {
-        "id": "164f23c85ca01179",
-        "type": "telegram command",
-        "z": "f083e45f72a3365a",
-        "g": "4acb7f1c89166cd3",
+        "id": "488ccb38a1577687",
+        "type": "tab",
+        "label": "Sistem Monitoring Kebakaran dan Lingkungan",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8c6bd7087f909bdf",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c2a48fb2418ff7a7",
+        "type": "group",
+        "z": "488ccb38a1577687",
+        "name": "membaca data dari sensor",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b69e732f97cf722c",
+            "3e1a6ea5f99bee2f",
+            "fd61c014c3527789",
+            "900382d8820b944d",
+            "424f465af7e7da12"
+        ],
+        "x": 214,
+        "y": 79,
+        "w": 1012,
+        "h": 142
+    },
+    {
+        "id": "1911c2b13c7aaf14",
+        "type": "group",
+        "z": "488ccb38a1577687",
+        "name": "guide chat",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0d70aaaa09d692a5",
+            "8d6009ba7c549d54",
+            "d42fbce6f76fb75b",
+            "35a013eadb43184b"
+        ],
+        "x": 214,
+        "y": 239,
+        "w": 872,
+        "h": 82
+    },
+    {
+        "id": "e7324036f60f9b1c",
+        "type": "group",
+        "z": "488ccb38a1577687",
+        "name": "mengirim peringatan jika ada kebakaran dan gas berbahaya",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1030dd1e7cc2df03",
+            "125c352b94fca70b",
+            "153bab33da828b3a",
+            "806cfb4933e38b93",
+            "1aee1a45f4efb01c",
+            "5c53ca44c774c0b6",
+            "bcaee80ae5b48ab9",
+            "0dbd100121a0255c",
+            "fbbd18add47ff37e",
+            "51d6a2e3d76b915f",
+            "db9592342e940eae",
+            "5549904618ee1d41",
+            "58206411f3101146",
+            "14af755d175102ca",
+            "6d184ec6718a1629",
+            "aafee108451e4eaf"
+        ],
+        "x": 214,
+        "y": 339,
+        "w": 1592,
+        "h": 242
+    },
+    {
+        "id": "7b8ffdb32f375287",
+        "type": "group",
+        "z": "488ccb38a1577687",
+        "name": "FILTER TABLE",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "860f88e12be44d22",
+            "a9bbe2123f2837f5",
+            "60835b5034d5786d",
+            "32df1e72c2fc8e16",
+            "20e40c190a507742",
+            "c5935fc66e146aba",
+            "cfbfa99fcd5591c2",
+            "78e5103c091361f4",
+            "15b13ac25825506c",
+            "c3a42a5eea0661e5",
+            "2ca198c009dc24bd"
+        ],
+        "x": 214,
+        "y": 599,
+        "w": 852,
+        "h": 222
+    },
+    {
+        "id": "dc826d5001751679",
+        "type": "group",
+        "z": "488ccb38a1577687",
+        "name": "DOWNLOAD REQUEST LINK (KETIKA LINK DOWNLOAD DI KLIK)",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a4d39ab2667a1321",
+            "71fcaa0f379b4891",
+            "ba1c156e71609263",
+            "87487959b10b0970",
+            "458f1e663f4be3d5",
+            "2d0375e6f9aeefaa",
+            "a3110b1028cd3792"
+        ],
+        "x": 214,
+        "y": 1119,
+        "w": 912,
+        "h": 162
+    },
+    {
+        "id": "aba6f009ef2af053",
+        "type": "group",
+        "z": "488ccb38a1577687",
+        "name": "WRITE FILE TO DIRECTORY",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6ba311441161ec47",
+            "e3867744eb5c6454",
+            "52382118735a078e",
+            "861dba82912a0351",
+            "022612e5f91972db",
+            "7bb4862ff612e9fb",
+            "a4c2432f6de83e7c",
+            "669b7b906425369b"
+        ],
+        "x": 214,
+        "y": 939,
+        "w": 852,
+        "h": 162
+    },
+    {
+        "id": "924e29a574ad3e96",
+        "type": "group",
+        "z": "488ccb38a1577687",
+        "name": "HAPUS DATA",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6e12067ac51392b7",
+            "5f18f20d75d0b8c9",
+            "76050714b5f649c7",
+            "7e620e83a44dc263"
+        ],
+        "x": 214,
+        "y": 839,
+        "w": 972,
+        "h": 82
+    },
+    {
+        "id": "5b7adca7927fc53b",
+        "type": "modbus-client",
         "name": "",
-        "command": "/start",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "bee52fa1e5935705",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 290,
-        "y": 280,
-        "wires": [
-            [
-                "a35dc0f1d1b029b4"
-            ],
-            []
-        ]
+        "clienttype": "serial",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "COM3",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "even",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "e79846b76b5d33ac",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a1b72e6b61382ffa",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "33d0819d3dd2b2fe",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "a1b72e6b61382ffa",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a0ac23ba056c091e",
+        "type": "modbus-client",
+        "name": "Serial",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.1.12",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "COM5",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "10",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "8954e8343ed22bcf",
+        "type": "ui_group",
+        "name": "LED",
+        "tab": "23ce40b25f59cdd3",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f3c95d91bc47cea4",
+        "type": "ui_group",
+        "name": "VFD",
+        "tab": "23ce40b25f59cdd3",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "23ce40b25f59cdd3",
+        "type": "ui_tab",
+        "name": "LED",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d20c091c71bec177",
+        "type": "ui_group",
+        "name": "DHT11",
+        "tab": "23ce40b25f59cdd3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "83f84c2838402815",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c440fb64982f81a2",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "coba",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "73b34ca166045d79",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.1.254",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "COM3",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "b6c72edb23a2af59",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "monitoring_lingk_kebakaran",
+        "tz": "",
+        "charset": "UTF8"
     },
     {
         "id": "bee52fa1e5935705",
         "type": "telegram bot",
         "botname": "Kebakaran_Humidity_bot",
+        "usernames": "",
+        "chatids": "6306126443",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "addressfamily": "",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "433ad243aadb6692",
+        "type": "ui_tab",
+        "name": "Monitoring",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e31ace128cfb69ff",
+        "type": "ui_group",
+        "name": "Monitoring Kebakaran dan Lingkungan Ruang Industri",
+        "tab": "433ad243aadb6692",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cbe4c827f6a258be",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "decc311748d42644",
+        "type": "ui_group",
+        "name": "TABLE",
+        "tab": "23ce40b25f59cdd3",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "92d555fc38ff8170",
+        "type": "ui_group",
+        "name": "CHART",
+        "tab": "23ce40b25f59cdd3",
+        "order": 3,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a0beffa9d7777c05",
+        "type": "ui_group",
+        "name": "GAUGE",
+        "tab": "23ce40b25f59cdd3",
+        "order": 1,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3d6026e81e4cbd66",
+        "type": "ui_group",
+        "name": "Tabel Monitoring",
+        "tab": "433ad243aadb6692",
+        "order": 2,
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "50acfe351822ec16",
+        "type": "ui_spacer",
+        "z": "488ccb38a1577687",
+        "name": "spacer",
+        "group": "3d6026e81e4cbd66",
+        "order": 9,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "7f37856a93b6b79a",
+        "type": "telegram bot",
+        "botname": "",
         "usernames": "",
         "chatids": "",
         "baseapiurl": "",
@@ -51,5 +630,1275 @@
         "useselfsignedcertificate": false,
         "sslterminated": false,
         "verboselogging": false
+    },
+    {
+        "id": "b69e732f97cf722c",
+        "type": "inject",
+        "z": "488ccb38a1577687",
+        "g": "c2a48fb2418ff7a7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "fd61c014c3527789"
+            ]
+        ]
+    },
+    {
+        "id": "3e1a6ea5f99bee2f",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "c2a48fb2418ff7a7",
+        "name": "simpan ke database",
+        "func": "var temperature = msg.payload[0] / 10;\nvar humidity = msg.payload[1] / 10;\nvar api = msg.payload[2]; // Misalnya, distance sekarang menjadi API\nvar gas = msg.payload[3]; // Nilai gas berasal dari payload indeks ke-3\nvar unixtime = Math.round(Date.now() / 1000);\n\nif (msg.payload != \"\") {\n    msg.topic = \"INSERT INTO monitoring(temperature, humidity, api, gas, unixtime) VALUES(\" + temperature + \",\" + humidity + \",\" + api + \",\" + gas + \",\" + unixtime + \")\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 120,
+        "wires": [
+            [
+                "900382d8820b944d"
+            ]
+        ]
+    },
+    {
+        "id": "fd61c014c3527789",
+        "type": "modbus-getter",
+        "z": "488ccb38a1577687",
+        "g": "c2a48fb2418ff7a7",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "1",
+        "quantity": "5",
+        "server": "73b34ca166045d79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "424f465af7e7da12",
+                "3e1a6ea5f99bee2f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "900382d8820b944d",
+        "type": "mysql",
+        "z": "488ccb38a1577687",
+        "g": "c2a48fb2418ff7a7",
+        "mydb": "b6c72edb23a2af59",
+        "name": "",
+        "x": 1080,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "424f465af7e7da12",
+        "type": "debug",
+        "z": "488ccb38a1577687",
+        "g": "c2a48fb2418ff7a7",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0d70aaaa09d692a5",
+        "type": "telegram command",
+        "z": "488ccb38a1577687",
+        "g": "1911c2b13c7aaf14",
+        "name": "",
+        "command": "/start",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "bee52fa1e5935705",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "8d6009ba7c549d54"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8d6009ba7c549d54",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "1911c2b13c7aaf14",
+        "name": "pesan untuk guide user",
+        "func": "msg.payload = {\n    \"chatId\" : 6306126443,\n    \"type\" : \"message\",\n    \"content\" : \"Monitoring Kebakaran dan Lingkungan\"\n\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "d42fbce6f76fb75b"
+            ]
+        ]
+    },
+    {
+        "id": "d42fbce6f76fb75b",
+        "type": "telegram sender",
+        "z": "488ccb38a1577687",
+        "g": "1911c2b13c7aaf14",
+        "name": "",
+        "bot": "bee52fa1e5935705",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "35a013eadb43184b"
+            ]
+        ]
+    },
+    {
+        "id": "35a013eadb43184b",
+        "type": "debug",
+        "z": "488ccb38a1577687",
+        "g": "1911c2b13c7aaf14",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1030dd1e7cc2df03",
+        "type": "inject",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "125c352b94fca70b",
+                "bcaee80ae5b48ab9",
+                "51d6a2e3d76b915f"
+            ]
+        ]
+    },
+    {
+        "id": "125c352b94fca70b",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "akses nilai terupdate ",
+        "func": "msg.topic = `\n    SELECT \n        api AS latest_api, \n        gas AS latest_gas \n    FROM monitoring \n    ORDER BY id DESC \n    LIMIT 1;\n`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 420,
+        "wires": [
+            [
+                "0dbd100121a0255c"
+            ]
+        ]
+    },
+    {
+        "id": "153bab33da828b3a",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "kirim pesan peringatan ",
+        "func": "// Validasi payload\nif (!msg.payload || msg.payload.length === 0) {\n    node.error(\"Data payload kosong atau tidak valid\", msg);\n    return null;\n}\n\n// Ambil nilai dari hasil query\nvar api = msg.payload[0].latest_api; // Ambil nilai API\nvar gas = msg.payload[0].latest_gas; // Ambil nilai GAS\n\n// Dapatkan timestamp saat ini\nvar timestamp = new Date().toLocaleString(); // Format waktu lokal\n\n// Inisialisasi pesan peringatan\nvar messageContent = \"\";\n\n// Cek kondisi\nif (api === 0) {\n    messageContent += `Peringatan! Terjadi kebakaran!\\n`;\n}\n\nif (gas === 0) {\n    messageContent += `Peringatan! Terdeteksi gas berbahaya!\\n`;\n}\n\n// Jika ada pesan yang perlu dikirimkan\nif (messageContent !== \"\") {\n    msg.payload = {\n        \"chatId\": 6306126443,\n        \"type\": \"message\",\n        \"content\": `${messageContent}Waktu: ${timestamp}`\n    };\n    return msg;\n}\n\n// Jika tidak ada kondisi yang terpenuhi, jangan kirim pesan\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 400,
+        "wires": [
+            [
+                "806cfb4933e38b93"
+            ]
+        ]
+    },
+    {
+        "id": "806cfb4933e38b93",
+        "type": "delay",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1300,
+        "y": 380,
+        "wires": [
+            [
+                "1aee1a45f4efb01c"
+            ]
+        ]
+    },
+    {
+        "id": "1aee1a45f4efb01c",
+        "type": "telegram sender",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "",
+        "bot": "bee52fa1e5935705",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1510,
+        "y": 380,
+        "wires": [
+            [
+                "5c53ca44c774c0b6"
+            ]
+        ]
+    },
+    {
+        "id": "5c53ca44c774c0b6",
+        "type": "debug",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bcaee80ae5b48ab9",
+        "type": "delay",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0dbd100121a0255c",
+        "type": "mysql",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "mydb": "b6c72edb23a2af59",
+        "name": "",
+        "x": 820,
+        "y": 420,
+        "wires": [
+            [
+                "153bab33da828b3a",
+                "14af755d175102ca"
+            ]
+        ]
+    },
+    {
+        "id": "fbbd18add47ff37e",
+        "type": "ui_gauge",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "",
+        "group": "e31ace128cfb69ff",
+        "order": 3,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "units",
+        "format": "{{value}} C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1290,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "51d6a2e3d76b915f",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "akses nilai terupdate ",
+        "func": "msg.topic = `\n    SELECT \n        temperature AS latest_temp, \n        humidity AS latest_hum \n    FROM monitoring \n    ORDER BY id DESC \n    LIMIT 1;\n`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 500,
+        "wires": [
+            [
+                "5549904618ee1d41"
+            ]
+        ]
+    },
+    {
+        "id": "db9592342e940eae",
+        "type": "ui_gauge",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "",
+        "group": "e31ace128cfb69ff",
+        "order": 4,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}} %",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1280,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5549904618ee1d41",
+        "type": "mysql",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "mydb": "b6c72edb23a2af59",
+        "name": "",
+        "x": 820,
+        "y": 500,
+        "wires": [
+            [
+                "58206411f3101146"
+            ]
+        ]
+    },
+    {
+        "id": "58206411f3101146",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "Menampilkan ke Dashboard",
+        "func": "\n\n// Ambil data dari payload\nvar temperature = msg.payload[0].latest_temp;\nvar humidity = msg.payload[0].latest_hum;\n\n\n// Kirim data ke masing-masing gauge\nreturn [\n    { payload: temperature }, // Untuk gauge temperature\n    { payload: humidity }     // Untuk gauge humidity\n];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 500,
+        "wires": [
+            [
+                "fbbd18add47ff37e"
+            ],
+            [
+                "db9592342e940eae"
+            ]
+        ]
+    },
+    {
+        "id": "14af755d175102ca",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "name": "Menampilkan ke Dashboard",
+        "func": "// Ambil data dari payload\nvar api = msg.payload[0].latest_api;\nvar gas = msg.payload[0].latest_gas;\n\n// Tentukan status berdasarkan nilai sensor\nvar apiStatus = api === 1 ? \"Aman\" : \"Terdeteksi Kebakaran\";\nvar gasStatus = gas === 1 ? \"Aman\" : \"Terdeteksi Gas Berbahaya\";\n\n// Kirim data ke masing-masing gauge\nreturn [\n    { payload: apiStatus }, // Untuk gauge sensor api\n    { payload: gasStatus }  // Untuk gauge sensor gas\n];\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 440,
+        "wires": [
+            [
+                "6d184ec6718a1629"
+            ],
+            [
+                "aafee108451e4eaf"
+            ]
+        ]
+    },
+    {
+        "id": "6d184ec6718a1629",
+        "type": "ui_text",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "group": "e31ace128cfb69ff",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status Kebakaran",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1310,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "aafee108451e4eaf",
+        "type": "ui_text",
+        "z": "488ccb38a1577687",
+        "g": "e7324036f60f9b1c",
+        "group": "e31ace128cfb69ff",
+        "order": 1,
+        "width": 14,
+        "height": 1,
+        "name": "",
+        "label": "Status Gas Berbahaya",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1320,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "860f88e12be44d22",
+        "type": "mysql",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "mydb": "b6c72edb23a2af59",
+        "name": "",
+        "x": 800,
+        "y": 780,
+        "wires": [
+            [
+                "2ca198c009dc24bd"
+            ]
+        ]
+    },
+    {
+        "id": "a9bbe2123f2837f5",
+        "type": "ui_table",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "group": "3d6026e81e4cbd66",
+        "name": "",
+        "order": 5,
+        "width": 14,
+        "height": 8,
+        "columns": [
+            {
+                "field": "number",
+                "title": "No.",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "unixtime",
+                "title": "Time",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "temperature",
+                "title": "Temperature",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "humidity",
+                "title": "Humidity",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "api",
+                "title": "Status Kebakaran",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "gas",
+                "title": "Status Gas Berbahaya",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 990,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "60835b5034d5786d",
+        "type": "ui_date_picker",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "",
+        "label": "Tanggal",
+        "group": "3d6026e81e4cbd66",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 300,
+        "y": 640,
+        "wires": [
+            [
+                "20e40c190a507742"
+            ]
+        ]
+    },
+    {
+        "id": "32df1e72c2fc8e16",
+        "type": "ui_button",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "",
+        "group": "3d6026e81e4cbd66",
+        "order": 4,
+        "width": 14,
+        "height": 1,
+        "passthru": false,
+        "label": "SUBMIT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 780,
+        "wires": [
+            [
+                "78e5103c091361f4"
+            ]
+        ]
+    },
+    {
+        "id": "20e40c190a507742",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "INPUT TANGGAL",
+        "func": "\nvar tanggal = parseInt(msg.payload/1000) - 25200;\nflow.set('tanggal', tanggal);\nmsg.payload = tanggal;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5935fc66e146aba",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "INPUT WAKTU AWAL",
+        "func": "var waktu_awal = parseInt(msg.payload / 1000);\nflow.set('waktu_awal', waktu_awal);\nmsg.payload = waktu_awal;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cfbfa99fcd5591c2",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "INPUT WAKTU AKHIR",
+        "func": "var waktu_akhir = parseInt(msg.payload/1000);\nflow.set('waktu_akhir', waktu_akhir);\nmsg.payload = waktu_akhir;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78e5103c091361f4",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "DATABASE QUERY",
+        "func": "var tanggal = flow.get('tanggal');\nvar waktu_awal = flow.get('waktu_awal');\nvar waktu_akhir = flow.get('waktu_akhir');\n\nvar start = tanggal+waktu_awal;\nvar end = tanggal+waktu_akhir;\n\nmsg.topic = \"SELECT * FROM monitoring WHERE unixtime BETWEEN \"+start+\" AND \"+end+\";\";\nmsg.payload = [tanggal,waktu_awal,waktu_akhir,start, end];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 780,
+        "wires": [
+            [
+                "860f88e12be44d22"
+            ]
+        ]
+    },
+    {
+        "id": "15b13ac25825506c",
+        "type": "ui_text_input",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "",
+        "label": "Dari",
+        "tooltip": "",
+        "group": "3d6026e81e4cbd66",
+        "order": 2,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "mode": "time",
+        "delay": "1",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 290,
+        "y": 680,
+        "wires": [
+            [
+                "c5935fc66e146aba"
+            ]
+        ]
+    },
+    {
+        "id": "c3a42a5eea0661e5",
+        "type": "ui_text_input",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "",
+        "label": "Sampai",
+        "tooltip": "",
+        "group": "3d6026e81e4cbd66",
+        "order": 3,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "mode": "time",
+        "delay": "1",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 300,
+        "y": 720,
+        "wires": [
+            [
+                "cfbfa99fcd5591c2"
+            ]
+        ]
+    },
+    {
+        "id": "2ca198c009dc24bd",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "7b8ffdb32f375287",
+        "name": "SET PARAMETER",
+        "func": "// Pastikan msg.payload berisi array data\nlet array = msg.payload;\n\n// Iterasi untuk memproses setiap elemen dalam array\narray.forEach((data, index) => {\n    // Konversi waktu Unix menjadi format lokal\n    if (data.unixtime) {\n        const date = new Date(data.unixtime * 1000);\n        data.unixtime = date.toLocaleString('es-US', {\n            timeZone: \"Asia/Jakarta\",\n            hour: \"2-digit\",\n            minute: \"2-digit\",\n            hour12: false\n        });\n    }\n\n    // Tambahkan unit ke temperature dan humidity\n    if (typeof data.temperature === \"number\") {\n        data.temperature = data.temperature + \" °C\";\n    }\n    if (typeof data.humidity === \"number\") {\n        data.humidity = data.humidity + \" %\";\n    }\n\n    // Tambahkan nomor urut\n    data.number = index + 1;\n\n    // Konversi nilai api ke status\n    if (typeof data.api === \"number\") {\n        data.api = data.api === 0 ? \"Terdeteksi Kebakaran\" : \"Aman\";\n    }\n\n    // Konversi nilai gas ke status\n    if (typeof data.gas === \"number\") {\n        data.gas = data.gas === 0 ? \"Terdeteksi Gas Berbahaya\" : \"Aman\";\n    }\n});\n\n// Kembalikan array yang telah diproses\nmsg.payload = array;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 720,
+        "wires": [
+            [
+                "a9bbe2123f2837f5"
+            ]
+        ]
+    },
+    {
+        "id": "a4d39ab2667a1321",
+        "type": "file in",
+        "z": "488ccb38a1577687",
+        "g": "dc826d5001751679",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 700,
+        "y": 1160,
+        "wires": [
+            [
+                "87487959b10b0970"
+            ]
+        ]
+    },
+    {
+        "id": "71fcaa0f379b4891",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "dc826d5001751679",
+        "name": "Set File name",
+        "func": "var fileLocation = flow.get('fileLocation');\nmsg.payload = fileLocation;\nmsg.filename = fileLocation;\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1200,
+        "wires": [
+            [
+                "a4d39ab2667a1321",
+                "a3110b1028cd3792"
+            ]
+        ]
+    },
+    {
+        "id": "ba1c156e71609263",
+        "type": "http response",
+        "z": "488ccb38a1577687",
+        "g": "dc826d5001751679",
+        "name": "Respons",
+        "statusCode": "",
+        "headers": {},
+        "x": 1040,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "87487959b10b0970",
+        "type": "change",
+        "z": "488ccb38a1577687",
+        "g": "dc826d5001751679",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.Content-Disposition",
+                "pt": "msg",
+                "to": "attachment; filename=\"REPORT MONITORING.csv\"",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 1160,
+        "wires": [
+            [
+                "ba1c156e71609263"
+            ]
+        ]
+    },
+    {
+        "id": "458f1e663f4be3d5",
+        "type": "http in",
+        "z": "488ccb38a1577687",
+        "g": "dc826d5001751679",
+        "name": "Request download",
+        "url": "/file",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 1200,
+        "wires": [
+            [
+                "71fcaa0f379b4891"
+            ]
+        ]
+    },
+    {
+        "id": "2d0375e6f9aeefaa",
+        "type": "file",
+        "z": "488ccb38a1577687",
+        "g": "dc826d5001751679",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "encoding": "none",
+        "x": 870,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3110b1028cd3792",
+        "type": "delay",
+        "z": "488ccb38a1577687",
+        "g": "dc826d5001751679",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "300",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 1240,
+        "wires": [
+            [
+                "2d0375e6f9aeefaa"
+            ]
+        ]
+    },
+    {
+        "id": "6ba311441161ec47",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "name": "QUERY SELECT",
+        "func": "var tanggal = flow.get('tanggal');\nvar waktu_awal = flow.get('waktu_awal');\nvar waktu_akhir = flow.get('waktu_akhir');\n\nvar start = tanggal + waktu_awal;\nvar end = tanggal + waktu_akhir;\n\nmsg.topic = \"SELECT * FROM monitoring WHERE unixtime BETWEEN \" + start + \" AND \" + end + \";\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1060,
+        "wires": [
+            [
+                "669b7b906425369b"
+            ]
+        ]
+    },
+    {
+        "id": "e3867744eb5c6454",
+        "type": "file",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 980,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52382118735a078e",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "name": "prepare data to csv",
+        "func": "// Membalik urutan data untuk memastikan urutan yang benar\nvar data = msg.payload.reverse();\nvar time = [];\nvar temperature = [];\nvar humidity = [];\nvar apiStatus = [];\nvar gasStatus = [];\n\nfor (var i = 0; i < msg.payload.length; i++) {\n    // Format waktu\n    time[i] = new Date(msg.payload[i].unixtime * 1000).toLocaleString('en-US', {\n        timeZone: \"Asia/Jakarta\",\n        hour: \"2-digit\",\n        minute: \"2-digit\",\n        hour12: false\n    });\n\n    // Data lainnya\n    temperature[i] = msg.payload[i].temperature;\n    humidity[i] = msg.payload[i].humidity;\n\n    // Status API (0 = Kebakaran, 1 = Aman)\n    apiStatus[i] = msg.payload[i].api === 0 ? \"Terdeteksi Kebakaran\" : \"Aman\";\n\n    // Status GAS (0 = Gas Berbahaya, 1 = Aman)\n    gasStatus[i] = msg.payload[i].gas === 0 ? \"Terdeteksi Gas Berbahaya\" : \"Aman\";\n}\n\n// Header CSV\nvar csv = \"REPORT MONITORING SENSOR \\n\";\ncsv += \"time,temperature,humidity,api_status,gas_status\\n\";\n\n// Isi data CSV\nfor (var j = msg.payload.length - 1; j >= 0; j--) {\n    csv += time[j] + \",\" + temperature[j] + \",\" + humidity[j] + \",\" + apiStatus[j] + \",\" + gasStatus[j] + \"\\n\";\n}\n\n// Menentukan payload dan direktori file\nmsg.payload = csv;\nvar basePath = \"C:\\Users\\asus\\Downloads\";\nvar fileName = \"data_export.csv\";\nmsg.filename = basePath + fileName;\nflow.set('fileLocation', basePath + fileName);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1060,
+        "wires": [
+            [
+                "e3867744eb5c6454"
+            ]
+        ]
+    },
+    {
+        "id": "861dba82912a0351",
+        "type": "ui_button",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "name": "",
+        "group": "3d6026e81e4cbd66",
+        "order": 6,
+        "width": 14,
+        "height": 1,
+        "passthru": false,
+        "label": "Download CSV",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "fa-download",
+        "payload": "file",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 320,
+        "y": 980,
+        "wires": [
+            [
+                "022612e5f91972db",
+                "6ba311441161ec47"
+            ]
+        ]
+    },
+    {
+        "id": "022612e5f91972db",
+        "type": "delay",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 980,
+        "wires": [
+            [
+                "a4c2432f6de83e7c"
+            ]
+        ]
+    },
+    {
+        "id": "7bb4862ff612e9fb",
+        "type": "ui_template",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "group": "3d6026e81e4cbd66",
+        "name": "link download",
+        "order": 8,
+        "width": 7,
+        "height": 1,
+        "format": "<script>\n  (function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        if (data == \"file\") {\n          window.open(\"http://localhost:1880/file\");\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 920,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4c2432f6de83e7c",
+        "type": "trigger",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "name": "reset msg",
+        "op1": "",
+        "op2": "empty",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 740,
+        "y": 980,
+        "wires": [
+            [
+                "7bb4862ff612e9fb"
+            ]
+        ]
+    },
+    {
+        "id": "669b7b906425369b",
+        "type": "mysql",
+        "z": "488ccb38a1577687",
+        "g": "aba6f009ef2af053",
+        "mydb": "b6c72edb23a2af59",
+        "name": "",
+        "x": 580,
+        "y": 1060,
+        "wires": [
+            [
+                "52382118735a078e"
+            ]
+        ]
+    },
+    {
+        "id": "6e12067ac51392b7",
+        "type": "function",
+        "z": "488ccb38a1577687",
+        "g": "924e29a574ad3e96",
+        "name": "DELETE DATABASE",
+        "func": "msg.topic = \"DELETE FROM monitoring WHERE 1\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 880,
+        "wires": [
+            [
+                "5f18f20d75d0b8c9"
+            ]
+        ]
+    },
+    {
+        "id": "5f18f20d75d0b8c9",
+        "type": "mysql",
+        "z": "488ccb38a1577687",
+        "g": "924e29a574ad3e96",
+        "mydb": "b6c72edb23a2af59",
+        "name": "",
+        "x": 860,
+        "y": 880,
+        "wires": [
+            [
+                "76050714b5f649c7"
+            ]
+        ]
+    },
+    {
+        "id": "76050714b5f649c7",
+        "type": "debug",
+        "z": "488ccb38a1577687",
+        "g": "924e29a574ad3e96",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "7e620e83a44dc263",
+        "type": "ui_button",
+        "z": "488ccb38a1577687",
+        "g": "924e29a574ad3e96",
+        "name": "",
+        "group": "3d6026e81e4cbd66",
+        "order": 7,
+        "width": 14,
+        "height": 1,
+        "passthru": false,
+        "label": "DELETE SEMUA DATA",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 880,
+        "wires": [
+            [
+                "6e12067ac51392b7"
+            ]
+        ]
     }
 ]
