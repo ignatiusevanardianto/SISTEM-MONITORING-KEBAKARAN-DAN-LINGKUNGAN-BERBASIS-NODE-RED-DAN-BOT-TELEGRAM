@@ -1,0 +1,55 @@
+[
+    {
+        "id": "164f23c85ca01179",
+        "type": "telegram command",
+        "z": "f083e45f72a3365a",
+        "g": "4acb7f1c89166cd3",
+        "name": "",
+        "command": "/start",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "bee52fa1e5935705",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "a35dc0f1d1b029b4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bee52fa1e5935705",
+        "type": "telegram bot",
+        "botname": "Kebakaran_Humidity_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "addressfamily": "",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    }
+]
